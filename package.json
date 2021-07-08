@@ -17,7 +17,7 @@
     "build": "yarn run build-storybook",
     "start": "yarn run storybook",
     "test": "lerna exec npm run test --concurrency 1",
-		"test-coverage": "lerna exec npm run test-coverage --concurrency 1",
+		"test:coverage": "lerna exec npm run test-coverage --concurrency 1",
     "setup-repo": "yarn install && yarn run setup-packages",
     "setup-packages": "lerna exec yarn install --concurrency 1",
     "test-all-build-packages": "lerna exec yarn run build --concurrency 1",
