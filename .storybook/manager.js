@@ -47,7 +47,7 @@ addons.setConfig({
   /**
    * theme storybook, see link below
    */
-  theme: bcpTheme,
+  theme: theme,
 
   /**
    * id to select an addon panel
