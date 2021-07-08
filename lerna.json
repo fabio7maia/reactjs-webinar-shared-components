@@ -1,0 +1,6 @@
+{
+	"packages": [
+		"src/packages/general"
+	],
+	"version": "1.0.0"
+}

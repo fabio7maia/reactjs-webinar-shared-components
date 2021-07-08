@@ -1,0 +1,101 @@
+{
+  "name": "reactjs-library-scaffold",
+  "license": "MIT",
+  "author": {
+    "email": "fabio7maia@gmail.com",
+    "name": "Fábio Maia"
+  },
+  "version": "1.0.0",
+  "files": [
+    "/build"
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "build": "yarn run build-storybook",
+    "start": "yarn run storybook",
+    "setup-repo": "yarn install && yarn run setup-packages",
+    "setup-packages": "lerna exec yarn install --concurrency 1",
+    "test-all-build-packages": "lerna exec yarn run build --concurrency 1",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "serve-storybook": "yarn run build-storybook && npx http-server ./storybook-static/",
+    "lint": "eslint . --ignore-path ./.gitignore",
+    "lint:spell": "npx cspell -c cspellrc.json",
+    "lint:styles": "stylelint src/**/*css",
+    "lint:fix": "yarn run lint -- --fix",
+    "lint:all": "yarn run lint && yarn run lint:spell && yarn run lint:styles",
+    "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "git:pre-commit": "lint-staged",
+    "git:pre-push": "yarn run test:coverage",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx}": [
+      "yarn run lint:all"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/reportWebVitals.ts",
+      "!src/**/*.d.ts"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-controls": "^6.3.4",
+    "@storybook/addon-docs": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/addon-viewport": "^6.3.4",
+    "@storybook/node-logger": "^6.3.4",
+    "@storybook/react": "^6.3.4",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "anysort": "^2.0.0",
+    "cspell": "^5.4.1",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "storybook-addon-i18n": "^5.1.13",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.1.2"
+  }
+}
