@@ -1,11 +1,11 @@
 {
-  "name": "reactjs-lybrary-scaffold-general",
+  "name": "@reactjs-library-scaffold/general",
   "license": "MIT",
   "author": {
     "email": "fabio7maia@gmail.com",
     "name": "Fábio Maia"
   },
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "module": "src/index.js",
   "files": [
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "del-cli --force ./dist && tsc --project tsconfig.build.json",
-    "pub": "npm run build && npm publish",
+    "pub": "yarn run build && yarn publish",
     "test": "craco test \"--watchAll=false\" \"--forceExit\"",
     "test:coverage": "craco test \"--coverage\" \"--watchAll=false\" \"--silent\" \"--forceExit\""
   },
