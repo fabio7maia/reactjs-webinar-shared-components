@@ -1,6 +1,6 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "baseUrl": "./src",
     "outDir": "./dist/",
     "sourceMap": false,
     "declaration": true,
@@ -10,19 +10,9 @@
     "module": "esnext",
     "target": "es6",
     "jsx": "react-jsx",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/custom-typings"
-    ],
-    "types": [
-      "jest",
-      "node"
-    ],
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "typeRoots": ["./node_modules/@types", "./src/custom-typings"],
+    "types": ["jest", "node"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -33,10 +23,6 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "exclude": [
-    "**/__stories__/**"
-  ],
-  "include": [
-    "src"
-  ]
+  "exclude": ["**/__stories__/**"],
+  "include": ["src"]
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Example } from '..';
 
 export default {
-  title: `General/Example`,
+  title: `New Package Scaffold/Story example`,
   component: Example
 };
 
