@@ -23,3 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 /.husky
+
+/src/packages/*/node_modules/
+/src/packages/*/build/
+/src/packages/*/coverage/
+/src/packages/*/dist/
+
+/storybook-static

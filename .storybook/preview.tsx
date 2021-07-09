@@ -23,13 +23,7 @@ addParameters({
       const [previousStory, previousMeta] = previous;
       const [nextStory, nextMeta] = next;
 
-      return anysort(previousMeta.kind, nextMeta.kind, [
-        'Overview/Introduction',
-        'Overview/Getting Started',
-        'Overview/Themes',
-        'Overview/**',
-        'Components/**'
-      ]);
+      return anysort(previousMeta.kind, nextMeta.kind, ['Welcome/Introduction', '**/**']);
     }
   }
 });

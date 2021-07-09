@@ -1,4 +1,24 @@
-node_modules/
-dist/
-[Tt]emp/
-[Ss]amples/
+# root folders
+/build
+/config
+/dist
+/node_modules
+/public
+/scripts
+/src/react-app-env.d.ts
+/src/serviceWorker.ts
+[Tt]emp
+[Ss]amples
+
+# packages folders
+/src/**/*.test.*
+/src/packages/**/build
+/src/packages/**/config
+/src/packages/**/dist
+/src/packages/**/node_modules
+/src/packages/**/public
+/src/packages/**/scripts
+/src/packages/*/src/externalLibs
+/src/packages/**/coverage
+/src/packages/**/[Tt]emp
+/src/packages/**/[Ss]amples

@@ -26,7 +26,7 @@
     "serve-storybook": "yarn run build-storybook && npx http-server ./storybook-static/",
     "lint": "eslint . --ignore-path ./.gitignore",
     "lint:spell": "npx cspell -c cspellrc.json",
-    "lint:styles": "stylelint src/**/*css",
+    "lint:styles": "stylelint src/packages/*/src/*css",
     "lint:fix": "yarn run lint -- --fix",
     "lint:all": "yarn run lint && yarn run lint:spell && yarn run lint:styles",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
@@ -83,6 +83,7 @@
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
     "anysort": "^2.0.0",
+    "babel-loader": "8.1.0",
     "cspell": "^5.4.1",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
@@ -98,6 +99,7 @@
     "storybook-addon-i18n": "^5.1.13",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "webpack": "4.44.2"
   }
 }
