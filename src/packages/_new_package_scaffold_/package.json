@@ -5,7 +5,7 @@
     "email": "fabio7maia@gmail.com",
     "name": "Fábio Maia"
   },
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "module": "src/index.js",
   "files": [
