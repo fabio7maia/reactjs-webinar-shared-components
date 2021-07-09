@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"sourceMap": false,
+		"declaration": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"noImplicitAny": false,
+		"module": "commonjs",
+		"target": "es6",
+		"jsx": "react",
+		"paths": {},
+		"typeRoots": ["./node_modules/@types", "./src/custom-typings"],
+		"types": ["jest", "node"]
+	},
+	"exclude": ["**/__stories__/**", "**/__tests__/**", "**/*.d.ts"],
+  "include": ["src"]
+}
