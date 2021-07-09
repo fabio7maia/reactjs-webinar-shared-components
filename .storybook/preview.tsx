@@ -10,8 +10,7 @@ addParameters({
     page: DocsPage
   },
   viewport: {
-    viewports: INITIAL_VIEWPORTS,
-    defaultViewport: 'iphone6'
+    viewports: INITIAL_VIEWPORTS
   },
   options: {
     /**
