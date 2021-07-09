@@ -1,5 +1,4 @@
-
-# Shared Packages Repo
+# React.js Shared Packages Repo
 
 ## Instalation
 
