@@ -2,7 +2,6 @@
   "name": "@reactjs-webinar/general",
   "license": "MIT",
   "author": {
-    "email": "fabio7maia@gmail.com",
     "name": "Fábio Maia"
   },
   "version": "0.1.0",
@@ -17,7 +16,7 @@
   },
   "scripts": {
     "build": "del-cli --force ./dist && tsc --project tsconfig.build.json",
-    "pub": "yarn run build && yarn publish",
+    "pub": "yarn run build && yarn publish --registry=https://registry.npmjs.org --access public",
     "test": "react-scripts test \"--watchAll=false\" \"--forceExit\"",
     "test:coverage": "react-scripts test \"--coverage\" \"--watchAll=false\" \"--silent\" \"--forceExit\""
   },

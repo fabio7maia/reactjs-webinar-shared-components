@@ -1,6 +1,4 @@
 {
-	"packages": [
-		"src/packages/general"
-	],
-	"version": "1.0.0"
+  "packages": ["src/packages/general", "src/packages/theme"],
+  "version": "1.0.0"
 }
