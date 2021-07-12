@@ -1,6 +1,5 @@
 import React from 'react';
-import { Company, Language, Platform } from '../../$consts';
-import { AppRootData } from '../../$types';
+import { AppRootData, Company, Language, Platform } from '../../$types';
 
 export const AppRootContext = React.createContext<AppRootData>({
   company: Company.company1,

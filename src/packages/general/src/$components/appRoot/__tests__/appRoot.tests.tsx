@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import { AppRoot } from '..';
-import { Company, Language, Platform } from '../../../consts';
+import { Company, Language, Platform } from '../../../$types';
 
 describe('AppRoot', () => {
   test('should render properly', async () => {

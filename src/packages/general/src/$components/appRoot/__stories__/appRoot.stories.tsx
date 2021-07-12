@@ -1,5 +1,5 @@
 import React from 'react';
-import { Company, Language, Platform } from '../../../consts';
+import { Company, Language, Platform } from '../../../$types';
 import { AppRoot } from '..';
 
 export default {
