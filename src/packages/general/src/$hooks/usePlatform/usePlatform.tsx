@@ -1,4 +1,4 @@
-import { Platform } from '../../$consts';
+import { Platform } from '../../$types';
 import { useAppRootContext } from '../../$components';
 
 export const usePlatform = (): Platform => {

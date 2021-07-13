@@ -1,6 +1,9 @@
 import React from 'react';
+import { Theme } from '@reactjs-webinar/theme';
+import { company1Theme, company2Theme } from '@reactjs-webinar/theme/dist/consts';
 import { AppRoot } from '../$components';
 import { ContextProps, WriteStoryInput, WriteStoryOutput } from './storybookHelper.types';
+import { Company } from '../types';
 
 export class StorybookHelper {
   static writeStory(input: WriteStoryInput): WriteStoryOutput {
@@ -29,7 +32,12 @@ export class StorybookHelper {
                   language: context.globals.language,
                   platform: context.globals.platform
                 }}>
-                {story()}
+                <Theme
+                  theme={
+                    context.globals.company === Company.company1 ? company1Theme : company2Theme
+                  }>
+                  {story()}
+                </Theme>
               </AppRoot>
             );
           }

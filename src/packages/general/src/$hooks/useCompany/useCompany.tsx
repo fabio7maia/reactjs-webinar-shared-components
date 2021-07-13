@@ -1,4 +1,4 @@
-import { Company } from '../../$consts';
+import { Company } from '../../$types';
 import { useAppRootContext } from '../../$components';
 
 export const useCompany = (): Company => {

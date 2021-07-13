@@ -29,3 +29,25 @@ Company2.args = {
     company2: { default: <h1>Render component example company2</h1> }
   }
 } as RenderComponentProps;
+
+export const Mobile = story.template.bind({});
+
+Mobile.args = {
+  components: {
+    default: {
+      default: <h1>Render component example defaults</h1>,
+      mobile: <h1>Render component example mobile</h1>
+    }
+  }
+} as RenderComponentProps;
+
+export const Desktop = story.template.bind({});
+
+Desktop.args = {
+  components: {
+    default: {
+      default: <h1>Render component example defaults</h1>,
+      desktop: <h1>Render component example desktop</h1>
+    }
+  }
+} as RenderComponentProps;

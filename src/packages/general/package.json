@@ -44,12 +44,12 @@
     ]
   },
   "peerDependencies": {
-    "@reactjs-webinar/theme": "^0.2.0",
+    "@reactjs-webinar/theme": "^0.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@reactjs-webinar/theme": "^0.2.0",
+    "@reactjs-webinar/theme": "^0.3.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^12.1.10",

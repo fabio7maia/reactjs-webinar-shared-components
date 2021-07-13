@@ -1538,10 +1538,10 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@reactjs-webinar/theme@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@reactjs-webinar/theme/-/theme-0.2.0.tgz#a8be3ada7417a676b33fbc04842120187b6ffc3f"
-  integrity sha512-TZKbdIHBE/b1juU5lSKQiXa1Q1XQSQlSeR1f0jUYXSbCkRE++jMqXGWorxYU5geVPzZhgRf74CWj8TUz5AWFQA==
+"@reactjs-webinar/theme@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@reactjs-webinar/theme/-/theme-0.3.0.tgz#3f7547ae020acbcfa33dc8ea5589560211fb6ef2"
+  integrity sha512-6Ucj5PVT+5gpOMx44pXLeL4cFuWyTqVsknL+105cY+u3Un2KImtWSNYlAOPYRdB/fPOMh00i2sCBz6IQ1BFnag==
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"

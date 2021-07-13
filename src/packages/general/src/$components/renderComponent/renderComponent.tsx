@@ -3,7 +3,7 @@ import { Company, Platform } from '../../$types';
 import { useCompany, usePlatform } from '../../$hooks';
 
 export interface RenderComponentProps {
-  components: Record<Company | 'default', Record<Platform | 'default', JSX.Element>>;
+  components: Record<Company & 'default', Record<Platform & 'default', JSX.Element>>;
 }
 
 export const RenderComponent: React.FC<RenderComponentProps> = ({ components }) => {
@@ -15,7 +15,7 @@ export const RenderComponent: React.FC<RenderComponentProps> = ({ components }) 
   if (components[company]) {
     component = components[company][platform] || components[company]['default'];
   } else if (components['default']) {
-    component = components['default']['default'];
+    component = components['default'][platform] || components['default']['default'];
   }
 
   return <>{component}</>;

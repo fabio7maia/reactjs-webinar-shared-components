@@ -2,7 +2,7 @@ import React from 'react';
 import { company1Theme } from '../../consts';
 import { Theme as ThemeType } from '../../types';
 
-const ThemeContext = React.createContext<ThemeType>({ ...company1Theme });
+export const ThemeContext = React.createContext<ThemeType>({ ...company1Theme });
 
 export interface ThemeProps {
   theme: ThemeType;
