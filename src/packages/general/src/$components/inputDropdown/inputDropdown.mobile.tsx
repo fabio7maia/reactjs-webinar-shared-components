@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/css';
 import RcDrawer from 'rc-drawer';
 import 'rc-drawer/assets/index.css';
+import { useTheme } from '@reactjs-webinar/theme/dist/hooks';
 import { Block } from '../block';
 import { InputDropdownProps } from './inputDropdown';
 import { useInputDropdownHelper } from './inputDropdownHelper.hook';
@@ -11,6 +12,7 @@ export const InputDropdownMobile: React.FC<InputDropdownProps> = (props) => {
   const { onChange, valueDisplay, items, propNameLabel, propNameValue, selectedItem } =
     useInputDropdownHelper(props);
   const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
 
   const handleOnClickOpen = React.useCallback(() => {
     setOpen(true);
@@ -23,19 +25,20 @@ export const InputDropdownMobile: React.FC<InputDropdownProps> = (props) => {
   return (
     <>
       <Block
-        style={{ border: '1px solid #000', padding: '5px', borderRadius: '5px' }}
+        style={{
+          border: `1px solid ${theme.colors.border}`,
+          padding: '5px',
+          borderRadius: '5px',
+          backgroundColor: theme.colors.background,
+          color: theme.colors.default
+        }}
         onClick={handleOnClickOpen}>
         <Block>
-          <label htmlFor={name}>{label}</label>
+          <label htmlFor={name} className={css({ fontWeight: 700 })}>
+            {label}
+          </label>
         </Block>
-        <Block style={{ padding: '5px 0 0 0' }}>
-          <input
-            className={css({ outline: 'none', border: 'none', ...style })}
-            name={name}
-            value={valueDisplay}
-            onChange={onChange}
-          />
-        </Block>
+        <Block style={{ padding: '5px 0 0 0', height: '23px' }}>{valueDisplay}</Block>
       </Block>
       <RcDrawer level={null} open={open} placement="bottom" onClose={handleOnClose} handler={<></>}>
         <Block style={{ padding: '20px' }}>

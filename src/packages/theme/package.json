@@ -4,7 +4,7 @@
   "author": {
     "name": "Fábio Maia"
   },
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "dist/index.js",
   "module": "src/index.js",
   "files": [
@@ -31,10 +31,7 @@
   "jest": {
     "coverageThreshold": {
       "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
+        "branches": 50
       }
     },
     "collectCoverageFrom": [

@@ -1,8 +1,8 @@
 import React from 'react';
-import { company1Theme } from '../../consts';
+import { lightTheme } from '../../consts';
 import { Theme as ThemeType } from '../../types';
 
-export const ThemeContext = React.createContext<ThemeType>({ ...company1Theme });
+export const ThemeContext = React.createContext<ThemeType>({ ...lightTheme });
 
 export interface ThemeProps {
   theme: ThemeType;

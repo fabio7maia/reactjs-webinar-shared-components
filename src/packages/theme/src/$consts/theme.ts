@@ -1,17 +1,21 @@
 import { Theme } from '../types';
 
-export const company1Theme: Theme = {
+export const darkTheme: Theme = {
   colors: {
-    default: '#264653',
-    primary: '#2a9d8f',
-    secondary: '#e9c46a'
+    default: '#03071e',
+    primary: '#6a040f',
+    secondary: '#f48c06',
+    background: '#e9ecef',
+    border: '#ced4da'
   }
 };
 
-export const company2Theme: Theme = {
+export const lightTheme: Theme = {
   colors: {
-    default: '#003049',
-    primary: '#f77f00',
-    secondary: '#eae2b7'
+    default: '#6d6875',
+    primary: '#5e60ce',
+    secondary: '#48bfe3',
+    background: '#caf0f8',
+    border: '#48cae4'
   }
 };

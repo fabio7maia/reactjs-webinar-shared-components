@@ -1,6 +1,6 @@
 import React from 'react';
 import { Theme } from '@reactjs-webinar/theme';
-import { company1Theme, company2Theme } from '@reactjs-webinar/theme/dist/consts';
+import { darkTheme, lightTheme } from '@reactjs-webinar/theme/dist/consts';
 import { AppRoot } from '../$components';
 import { ContextProps, WriteStoryInput, WriteStoryOutput } from './storybookHelper.types';
 import { Company } from '../types';
@@ -49,9 +49,7 @@ export class StorybookHelper {
                   platform: context.globals.platform
                 }}>
                 <Theme
-                  theme={
-                    context.globals.company === Company.company1 ? company1Theme : company2Theme
-                  }>
+                  theme={context.globals.company === Company.company1 ? lightTheme : darkTheme}>
                   {story()}
                 </Theme>
               </AppRoot>
