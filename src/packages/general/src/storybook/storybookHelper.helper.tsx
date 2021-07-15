@@ -8,7 +8,23 @@ import { Company } from '../types';
 export class StorybookHelper {
   static writeStory(input: WriteStoryInput): WriteStoryOutput {
     const { args, component: Component, module } = input;
-    const template = (props: React.ReactNode): React.ReactNode => <Component {...props} />;
+    const template = (props: any): React.ReactNode => {
+      const { value, onChange } = props;
+
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const [innerValue, setInnerValue] = React.useState(value);
+
+      return (
+        <Component
+          {...props}
+          value={innerValue}
+          onChange={(value) => {
+            setInnerValue(value);
+            onChange?.(value);
+          }}
+        />
+      );
+    };
 
     const stories = {};
 

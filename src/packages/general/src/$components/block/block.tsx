@@ -3,9 +3,10 @@ import { css } from '@emotion/css';
 
 export interface BlockProps {
   style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
-export const Block: React.FC<BlockProps> = ({ children, style }) => {
+export const Block: React.FC<BlockProps> = ({ children, onClick, style }) => {
   return (
     <div
       className={css({
@@ -13,7 +14,9 @@ export const Block: React.FC<BlockProps> = ({ children, style }) => {
         boxSizing: 'border-box',
         flexDirection: 'column',
         ...style
-      })}>
+      })}
+      onClick={onClick}
+      aria-hidden="true">
       {children}
     </div>
   );
