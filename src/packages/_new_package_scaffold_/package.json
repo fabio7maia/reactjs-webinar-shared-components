@@ -11,7 +11,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.build.json",
+    "build": "node scripts/pre-build.js && tsc --project tsconfig.build.json",
     "pub": "yarn run build && yarn publish --registry=https://registry.npmjs.org --access public",
     "test": "react-scripts test \"--watchAll=false\" \"--forceExit\"",
     "test:coverage": "react-scripts test \"--coverage\" \"--watchAll=false\" \"--silent\" \"--forceExit\""
@@ -58,6 +58,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.2"
   }
 }

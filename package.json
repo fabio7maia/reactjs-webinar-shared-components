@@ -9,9 +9,6 @@
   "files": [
     "/static-storybook"
   ],
-  "engines": {
-    "node": ">=12.20.0"
-  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -27,7 +24,7 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "serve:storybook": "yarn run build-storybook && npx http-server ./storybook-static/",
-    "lint": "eslint . --ignore-path ./.gitignore",
+    "lint": "eslint . --ignore-path ./.eslintignore",
     "lint:spell": "npx cspell -c cspellrc.json",
     "lint:styles": "stylelint src/packages/*/src/*css",
     "lint:fix": "yarn run lint -- --fix",

@@ -38,7 +38,14 @@
     "package*.json",
     "packages/*/samples/**",
     "packages/Samples/**",
-    "temp"
+    "temp",
+    "**/storybook-static/**",
+    "**/yarn.lock",
+    "**/yarn-error.log",
+    "**/craco.config.js",
+    "*/**/*.stories.*",
+    "**/node_modules/**",
+    "**/README.md"
   ],
   "ignoreWords": ["commitcomment"]
 }

@@ -7,8 +7,15 @@
 /scripts
 /src/react-app-env.d.ts
 /src/serviceWorker.ts
+/.husky
+/.storybook
+/.vscode
+/storybook-static
 [Tt]emp
 [Ss]amples
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # packages folders
 /src/**/*.test.*

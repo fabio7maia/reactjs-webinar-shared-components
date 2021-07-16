@@ -4,14 +4,14 @@
   "author": {
     "name": "Fábio Maia"
   },
-  "version": "0.8.0",
+  "version": "0.9.0",
   "main": "dist/index.js",
   "module": "src/index.js",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "del-cli --force ./dist && tsc --project tsconfig.build.json",
+    "build": "node scripts/pre-build.js && tsc --project tsconfig.build.json",
     "pub": "yarn run build && yarn publish --registry=https://registry.npmjs.org --access public",
     "test": "react-scripts test \"--watchAll=false\" \"--forceExit\"",
     "test:coverage": "react-scripts test \"--coverage\" \"--watchAll=false\" \"--silent\" \"--forceExit\""
@@ -59,12 +59,12 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-select": "^4.0.17",
-    "del-cli": "^4.0.0",
     "rc-drawer": "^4.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-select": "^4.3.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.2"
   }
 }
